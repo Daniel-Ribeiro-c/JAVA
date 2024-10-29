@@ -1,0 +1,20 @@
+Daniel Ribeiro da Costa 
+28/10/2024
+TDS SENAI programação de aplicativos
+
+public class pi {
+    public static void main(String[] args) {
+        int i;
+
+        for (i = 1; i <= 100; i++){
+
+            if(i % 4 == 0) {
+                System.out.println("pi");
+           
+            } else{
+                System.out.println(i);
+            }
+
+        }
+    }
+}
