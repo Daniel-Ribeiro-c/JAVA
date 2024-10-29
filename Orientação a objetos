@@ -1,0 +1,173 @@
+Daniel Ribeiro da Costa 
+29/10/2024
+TDS SENAI programação de aplicativos
+
+1) 
+
+PRINCIPAL:
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Qual número você deseja receber o dobro? ");
+        float n2 = scan.nextFloat();
+
+        Calculadora calc = new Calculadora();
+        float resultado = calc.CalcularDobro(n2);
+
+        System.out.println("O dobro do número " + n2 + " é: " + resultado);
+
+    }
+}
+
+CALCULADORA:
+
+public class Calculadora {
+    float CalcularDobro(float n) {
+        return n * 2;
+    }
+}
+
+2)
+
+PRINCIPAL:
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Deseja ver a ficha técnica da música? (S/N)");
+        char opcao = scan.next().charAt(0);
+
+        if (opcao == 'S' || opcao == 's') {
+            FichaTecnica f = new FichaTecnica();
+            f.Mostraficha();
+            System.out.println("Deseja ver avaliar a música? (S/N)");
+            char opcao2 = scan.next().charAt(0);
+
+            if(opcao2 == 'S' || opcao2 == 's'){
+                System.out.println("de 1 a 10 qual sua nota?: ");
+                float av = scan.nextFloat();
+                if(av > 10 || av < 1){
+                    System.out.println("nota errada!");
+                }else{
+                    f.Fichaatualizada();
+                    System.out.println("A media das notas é 8.5");
+                }
+
+            } else{
+                System.out.println("Programa encerrado!");
+            }
+        } else {
+            System.out.println("Programa encerrado!");
+        }
+    }
+}
+
+FICHATECNICA:
+
+class FichaTecnica {
+    String titulo = "Zé Neto e Cristiano";
+    String artista = "Oi Balde";
+    int anoLancamento = 2019;
+    int numDeAvaliacoes = 100000;
+
+    void Mostraficha() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Artista: " + artista);
+        System.out.println("Ano de Lançamento: " + anoLancamento);
+        System.out.println("Número de Avaliações: " + numDeAvaliacoes);
+    }
+    void Fichaatualizada(){
+        System.out.println("Título: " + titulo);
+        System.out.println("Artista: " + artista);
+        System.out.println("Ano de Lançamento: " + anoLancamento);
+        System.out.println("Número de Avaliações: " + numDeAvaliacoes + 1);
+    }
+}
+
+3)
+
+PRINCIPAL:
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Deseja ver a ficha técnica do carro? (S/N)");
+        char opcao = scan.next().charAt(0);
+
+        if (opcao == 'S' || opcao == 's') {
+            Fichatecnica f = new Fichatecnica();
+            f.Mostraficha();
+            System.out.println("Deseja ver a idade do carro? (S/N)");
+            char opcao2 = scan.next().charAt(0);
+            if (opcao2 == 'S' || opcao2 == 's') {
+                f.Calcularano();
+            } else {
+                System.out.println("Programa encerrado!");
+            }
+            
+        } else {
+            System.out.println("Programa encerrado!");
+        }
+
+    }
+}
+
+FICHA E IDADE:
+
+public class Fichatecnica {
+    String Modelo = "Omega";
+    String Marca = "Chevrolet";
+    String cor = "Preto";
+    int ano = 1999;
+    int idade;
+    void Mostraficha() {
+        System.out.println("Modelo: " + Modelo);
+        System.out.println("Marca: " + Marca);
+        System.out.println("cor: " + cor);
+        System.out.println("ano: " + ano);
+    }
+    void Calcularano(){
+        idade = 2024 - ano;
+        System.out.println("Idade do carro: " + idade);
+    }
+}
+
+4)
+
+PRINCIPAL:
+
+import java.util.Scanner;
+public class Principal {
+    public static void main(String[] args) {
+        fichaluno f = new fichaluno();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Qual o nome do aluno? ");
+        String Nome1 = scan.nextLine();
+        System.out.println("Qual a idade do aluno? ");
+        int Idade1 = scan.nextInt();
+        f.Nome = Nome1;
+        f.Idade = Idade1;
+        f.aluno();
+
+    }
+}
+
+FICHA:
+
+public class fichaluno {
+    String Nome;
+    int Idade;
+    Void aluno(){
+        System.out.println("Nome do aluno: " + Nome);
+        System.out.println("Idade do aluno: " + Idade);
+
+        return null;
+    }
+}
