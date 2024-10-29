@@ -1,0 +1,20 @@
+Daniel Ribeiro da Costa 
+28/10/2024
+TDS SENAI programação de aplicativos
+
+PRINCIPAL:
+public class PRINCIPAL {
+
+    public static void main(String[] args) {
+        ALUNO a1 = new ALUNO();
+        a1.codigo = 1;
+        a1.nome = "Allan";
+        System.out.println("O nome do melhor aluno é: " + a1.nome);
+
+    }
+}
+ALUNO:
+public class ALUNO {
+        int codigo;
+        String nome;
+}
