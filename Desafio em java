@@ -1,0 +1,57 @@
+Daniel Ribeiro da Costa 
+28/10/2024
+TDS SENAI programação de aplicativos
+
+1:
+
+import java.util.Scanner;
+public class Media {
+    public static void main(String[] args) {
+        float Nota1;
+        float Nota2;
+
+        float Media = 0.0f;
+         Scanner scan = new Scanner(System.in);
+            System.out.println("Digite sua nota: ");
+                 Nota1 = scan.nextFloat();
+            System.out.println("Digite sua OUTRA nota: ");
+                Nota2 = scan.nextFloat();
+        Media = (Nota1 + Nota2) / 2;
+
+       System.out.println("A média é: " + Media);
+
+    }
+}
+
+2:
+public class palavraletra {
+    public static void main(String[] args) {
+        String palavra = "legal";
+        char letra = 'é';
+
+        System.out.println("esporte " + letra + " " + palavra);
+    }
+}
+
+
+3:
+public class lojinha {
+    public static void main(String[] args) {
+        int Quantidade = 10;
+        float Precoproduto = 20.50f;
+        float Precototal = 0.0f;
+        Precototal = Precoproduto * Quantidade;
+        System.out.println("Preco total é: " + Precototal);
+
+
+    }
+}
+
+4:
+public class Dolar {
+    public static void main(String[] args) {
+       double Valoremdolares = 1;
+
+        System.out.println("O valor em dólar é U$ 1.00 Já em real é: " + Valoremdolares*4.97);
+    }
+}
