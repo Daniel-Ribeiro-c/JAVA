@@ -1,0 +1,76 @@
+import java.util.Scanner;
+	
+public class firstClass {
+   // Atalho psvm
+   public static void main(String[] args){
+// Atalho sout
+       System.out.println("Hello World!");
+       int num = 10;
+       float numDecimal;
+       double numDouble;
+       char letra;
+       boolean ativo;
+       numDecimal = 10.5F;
+       numDouble = 12.5D;
+       letra = 'a';
+       ativo = false;
+
+
+       System.out.println(numDecimal);
+       System.out.println("O número é: " + numDecimal);
+       System.out.println(letra);
+       System.out.println("A letra é: " + letra);
+
+
+// Estrutura de controle Se Senao
+       if(num == 10) {
+           System.out.println("O número é igual a 10");
+       } else {
+           System.out.println("O número não é igual a 10");
+       }
+//Estrutura de controle Para
+       for(int i = 0; i<= 10; i++){
+           System.out.println(i);
+       }
+
+
+       while(!ativo){
+           System.out.println("Olá");
+           break;
+           /*ativo = true;*/
+       }
+
+
+      
+        do{
+           System.out.println("Vai imprimir independente da condição");
+       }while(ativo);
+
+
+       Scanner ler = new Scanner(System.in);
+
+       System.out.println("Menu: ");
+       System.out.println("1- Oficina");
+       System.out.println("2- Manutenção");
+       System.out.println("3- Sair");
+      
+System.out.print("Digite uma opção: ");
+       int opcao = ler.nextInt();
+       
+switch(opcao){
+           case 1:
+               System.out.println("Orçamentos");
+               break;
+           case 2:
+               System.out.println("Ordem de serviço");
+               break;
+           case 3:
+               System.out.println("Saindo...");
+               break;
+           default:
+               System.out.println("Erro...");
+               break;
+       }
+   }
+}
+
