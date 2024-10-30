@@ -1,0 +1,67 @@
+Daniel Ribeiro da Costa 
+30/10/2024
+TDS SENAI programação de aplicativos
+
+1)
+
+import java.util.Scanner;
+
+public class Principal {
+
+    public static void main(String[] args) {
+      leitore();
+    }
+   static  void leitore(){
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite um nome: ");
+        String nome = scan.nextLine();
+        System.out.println("O nome digitado é: " + nome);
+    }
+}
+
+2)
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+      float num = multiplicador();
+        System.out.println("O numero multiplicado por 10 é: " + num);
+    }
+    public static float multiplicador(){
+        Scanner scan = new Scanner(System.in);
+        int num;
+        float mul;
+        System.out.println("Digite um número: ");
+        num = scan.nextInt();
+        return num * 10;
+
+    }
+}
+
+3)
+
+import java.util.Scanner;
+
+public class Principal{
+    public static void main(String[] args) {
+        float soma = Somado();
+        System.out.println("A soma é: " + soma);
+    }
+    public static float Somado(){
+        int num1, num2, soma;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite o primeiro número: ");
+        num1 = scan.nextInt();
+        System.out.println("Digite o segundo número: ");
+        num2 = scan.nextInt();
+
+        soma = num1 + num2;
+        return soma;
+
+    }
+}
+
+
