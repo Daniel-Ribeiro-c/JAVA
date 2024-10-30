@@ -1,0 +1,32 @@
+import java.math.*;
+import java.util.Date;
+import java.util.Calendar;
+
+public class Principal {
+    public static void main(String[] args) {
+        System.out.println(Math.PI);
+        
+        //Matemática
+        
+        // Math math = new Math(); não é necessário
+        // Math.PI(); Número PI
+        // Math.pow(); Potência
+        // Math.sqrt(); Raiz Quadrada
+        // Math.random(); Números aleatórios
+        // Math.round(); Arredondar número
+        
+        //Data
+        Data d = new Date();
+        System.out.println(d.getTime());
+  //      d.getTime(); Pegar os valores correspondentes a Time
+  //      d.after(); Ver a próxima data 
+  //      d.before(); Ver a data anterior
+  //      d.compareTo(); Comparar datas
+        
+        //Calendario
+        Calendar calendar = Calendar.getInstance();
+        System.out.println(calendar.getInstance());
+  //    calendar.getInstance();  Pegar os valores correspondentes a Time
+  //    calendar.set(); Setar Ano, Mês, Dia, Hora, Minuto e Segundo
+    }
+}
