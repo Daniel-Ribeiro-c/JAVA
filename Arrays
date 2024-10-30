@@ -1,0 +1,32 @@
+public class Principal {
+    public static void main(String[] args){
+        // Formas de Criar, inicializar Arrays e atribuir valor e Arrays
+
+        // 1° forma:
+        int[] a;
+        a = new  int[10];
+
+        for (int i = 0;  i < a.length; i ++){
+            a[i] = i;
+        }
+
+        for(int numeros : a) {
+            System.out.println(numeros);
+        }
+        // 2° forma:
+        int[] numeros = {1,2,3,4,5};
+        System.out.println(numeros[0]);
+
+        // 3° forma:
+        String[] nomes = new String[10];
+        nomes[0] = "Carlos";
+        System.out.printf(nomes[0]);
+
+        String[][] array{
+            {"  "},
+            {" "},
+
+        };
+
+    }
+}
