@@ -1,0 +1,66 @@
+LIST:
+
+MAIN:
+package com.senai.List;
+import java.util.List;
+import java.util.ArrayList;
+//  import java.util.LinkedList;
+
+public class Main {
+
+        public static void main(String[] args) {
+
+            Lista lista = new Lista();
+            System.out.println(lista);
+
+            List<String> list = new ArrayList<>();
+//        List list1 = new LinkedList();
+
+            list.add(0, "Uva");
+            list.add(1, "Abobora");
+            list.add(2, "maça");
+            list.add(3, "Laranja");
+
+
+
+            for(int i=0; i < list.size(); i++){
+                System.out.println(list.get(i));
+            }
+
+            for(String frutas: list){
+                System.out.println("fruta: " + frutas);
+            }
+        }
+    }
+
+LISTA:
+package com.senai.List;
+
+public class Lista {
+    String nome = "Allan";
+    String sobrenome = "Dias";
+
+    public String toString(){
+        return "[" + nome + ", "+ sobrenome + "]";
+    }
+}
+
+
+
+HASPMAP:
+package com.senai.map;
+
+import java.util.Map;
+import java.util.HashMap;
+public class Main {
+    public static void main(String[] args) {
+        Map<String, String> cv = new HashMap<>();
+        cv.put("Alaan", "111-111-111-11");
+        cv.put("Alisson", "222-222-222-22");
+
+        for (String cvKey : cv.keySet()){
+            System.out.println(cvKey + " : " + cv.get(cvKey));
+        }
+        cv.remove("Surname");
+    }
+}
