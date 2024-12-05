@@ -1,0 +1,33 @@
+package com.senai.exceptions;
+
+import java.util.Scanner;
+
+public class Sistema {
+    public static void main(String[] args) {
+        Calculo c = new Calculo();
+        Scanner sc = new Scanner(System.in);
+
+        try{
+            System.out.println("Digite um número: ");
+            float n1 = sc.nextFloat();
+
+            System.out.println("Digite outro número: ");
+            float n2 = sc.nextFloat();
+
+            System.out.println(c.recebeValor(n1, n2));
+        }   catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+}
+calculo: 
+
+package com.senai.exceptions;
+
+
+public class Calculo{
+    public float recebeValor(float n1, float n2){
+        return n1 / n2;
+    }
+}
