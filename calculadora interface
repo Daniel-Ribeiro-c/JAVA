@@ -1,0 +1,63 @@
+package com.senai.javaswing;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Janela {
+    public static void main(String[] args) {
+        // Configuração da janela
+        JFrame janela = new JFrame("Minha primeira janela");
+        janela.setBounds(0, 0, 250, 320);  // Ajustando o tamanho da janela
+        janela.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        // Usando FlowLayout com alinhamento centralizado e espaçamento
+        FlowLayout flow = new FlowLayout(FlowLayout.CENTER, 10, 10);
+        Container caixa = janela.getContentPane();
+        caixa.setLayout(flow);
+
+        // Campo de exibição
+        JTextField display = new JTextField( 20);
+        caixa.add(display);
+
+        // Primeira linha de botões
+        caixa.add(new JButton("% "));
+        caixa.add(new JButton("CE"));
+        caixa.add(new JButton("C "));
+        caixa.add(new JButton("⌫"));
+
+        // Segunda linha de botões
+        for (int i = 9; i >= 7; i--) {
+            caixa.add(new JButton(" " + i));
+        }
+        caixa.add(new JButton("x "));
+
+        // Terceira linha de botões
+        for (int i = 6; i >= 4; i--) {
+            caixa.add(new JButton(" " + i));
+        }
+        caixa.add(new JButton("- "));
+
+        // Quarta linha de botões
+        for (int i = 3; i >= 1; i--) {
+            caixa.add(new JButton(" " + i));
+        }
+        caixa.add(new JButton("+ "));
+
+        // Quinta linha de botões
+        caixa.add(new JButton("± "));
+        caixa.add(new JButton("0 "));
+        caixa.add(new JButton(", "));
+        caixa.add(new JButton("= "));
+
+        // Botão para encerrar o programa
+        JButton encerrar = new JButton("Encerrar");
+        encerrar.setFont(new Font("Arial", Font.BOLD, 14));
+        encerrar.setBackground(Color.RED);
+        encerrar.setForeground(Color.WHITE);
+        encerrar.addActionListener(e -> System.exit(0));
+        caixa.add(encerrar);
+
+
+        janela.setVisible(true);
+    }
+}
